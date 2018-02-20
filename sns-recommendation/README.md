@@ -1,9 +1,14 @@
- <!--MathJax数学公式-->
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-  </script>
-  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
-	
+
+
+## (2004)The Link Prediction Problem for Social Networks)
+
+这篇文章有个不错的阅读笔记，[参考这里](http://be.amazd.com/link-prediction/)。
+
+主要使用了各种节点相似性来预测link。而且这里的link是可以重复发生的，即一起发表论文，与好推荐不太一样。
+
+没有使用任何召回方法，直接蛮力计算$n^2$好友对，然后用各种相似性排序，最后评估不同相似性算法的准确性。
+
+最能够有参考意义的就是各种相似性算法。
 
 ## (2005)Prediction and Ranking Algorithms for Event-Based Network Data
 
@@ -205,4 +210,3 @@ depending on whether those author pairs published at least one paper in the test
 3. 训练：得到用户基础信息和基于网络拓扑结构抽取特征，进行训练与交叉验证，调整线下模型。
 4. 预测：与预测空间的逻辑一致，得到预测数据，并预测后续可能成对情况。
 5. 效果验证：通过MAP，召回等手段线上验证，并进行A\B test。
-
